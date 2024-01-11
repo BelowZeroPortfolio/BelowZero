@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="img/bg.png">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html"><i class="fa-brands fa-joomla"></i>Carl Navid</a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="burger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <div class="col-left">
+            <h3>Hi there!</h3><br>
+            <p>I'm <span>Carl Navid Cata-an </span>,<br> a passionate web developer with a knack for turning lines of code into captivating digital experiences. My journey in the tech world is fueled by a relentless curiosity and a commitment of staying at the forefront of emerging technologies.</p>
+        </div>
+        <div class="col-right">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="img/pic1.jpg" alt="Image 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/pic2.jpg" alt="Image 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/pic.png" alt="Image 3">
+                </div>
+        
+                <button class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-angle-left"></i></button>
+                <button class="next" onclick="plusSlides(1)"><i class="fa-solid fa-angle-right"></i></button>
+        
+                <div class="pagination">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbox">
+        <h2>My Toolbox</h2>
+        <div class="tools">
+            <div class="tool fig-tool">
+                <i class="fa-brands fa-figma"></i>
+                <h3>Figma</h3>
+                <p>Where ideas come to life collaboratively.</p>
+            </div>
+            <div class="tool">
+                <i class="fa-solid fa-code"></i>
+                <h3>HTML, CSS, JavaScript</h3>
+                <p>Crafting pixel-perfect front-end experiences.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="skillbar">
+        <h3>SKILL BAR</h3>
+        <div class="bar" id="bar1">
+            <label for="html">HTML</label>
+            <progress id="html" value="40" max="100">80%</progress>
+        </div>
+        <div class="bar" id="bar2">
+            <label for="css">CSS</label>
+            <progress id="css" value="50" max="100">80%</progress>
+        </div>
+
+        <div class="bar" id="bar3"> 
+            <label for="js">JAVASCRIPT</label>
+            <progress id="js" value="5" max="100">80%</progress>
+        </div>
+
+        <div class="bar" id="bar4">
+            <label for="figma">FIGMA</label>
+            <progress id="figma" value="40" max="100">80%</progress>
+        </div>
+        <a href="projects.html" id="btn" >View Projects</a>
+    </div>
+
+    
+    <footer class="footer">
+        <h3>Contact me:</h3><br>
+        <p>+1-415-555-1073</p>
+        <p>cataancarlnavid@gmail.com</p><br>
+        <p>1234 Street, Pulupandan</p>
+        <p>Negros Occidental</p>
+        <div class="logo">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-telegram"></i>
+        </div>
+        
+    </footer>
+    <script src="burger.js" defer></script>
+
+
+    <script>
+        let currentSlideIndex = 1;
+    
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("carousel-slide");
+            let dots = document.getElementsByClassName("dot");
+    
+            if (n > slides.length) {
+                currentSlideIndex = 1;
+            }
+    
+            if (n < 1) {
+                currentSlideIndex = slides.length;
+            }
+    
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+    
+            slides[currentSlideIndex - 1].style.display = "block";
+            dots[currentSlideIndex - 1].className += " active";
+        }
+    
+        function plusSlides(n) {
+            showSlides(currentSlideIndex += n);
+        }
+    
+        function currentSlide(n) {
+            showSlides(currentSlideIndex = n);
+        }
+    
+        // Automatically slide every 2 seconds
+        setInterval(function () {
+            plusSlides(1);
+        }, 2000);
+    
+        // Initialize the carousel
+        showSlides(currentSlideIndex);
+    </script>
+    
+</body>
+</html>
