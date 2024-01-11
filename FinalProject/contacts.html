@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Carl Navid</title>
+    <link rel="icon" href="img/bg.png">
+    <link rel="stylesheet" href="contacts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html"><i class="fa-brands fa-joomla"></i>Carl Navid</a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="burger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="col-left">
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Email" required><br>
+
+            <label for="comments">Comments:</label>
+            <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Type here..." maxlength="100"></textarea>
+
+            <input type="submit" name="submit" class="submit">
+        </div>
+        <div class="col-right">
+            <h2>Carl Navid</h2><br>
+            <h4>I'll accept any feedback from you</h4>
+            <p>123 Anywhere St.,</p>
+            <p>Pulupandan, ST. 12345</p><br><br>
+
+            <p>123-456-789</p>
+            <p>cataancarlnavid@gmail.com</p>
+            <div class="logos">
+                <a href=""><i class="fa-brands fa-google"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a></i>
+                <a href=""><i class="fa-brands fa-twitter"></i></a></i>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <script src="tr.js" defer></script>
+    <script>
+        // JavaScript specific to the contact page can be added here
+    </script>
+</body>
+
+</html>
